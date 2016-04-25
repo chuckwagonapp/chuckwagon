@@ -33,12 +33,16 @@ ion-header-bar.bar-calm.bar.bar-header {
 .desc {
   margin-left: 440px;
   margin-right: 40px; }
-  .desc a {
-    color: #259bcd;
-    text-decoration: none;
-    transition: all .3s ease-in-out; }
-    .desc a:hover {
-      color: #19579a; }
+  .desc h1 {
+    color: #f0533d; }
+    .desc h1 a {
+      color: #259bcd;
+      text-decoration: none;
+      transition: all .3s ease-in-out; }
+      .desc h1 a:hover {
+        color: #19579a; }
+  .desc ul li {
+    margin-left: 30px; }
 
 .has-feedback .form-control-feedback {
   top: 0;

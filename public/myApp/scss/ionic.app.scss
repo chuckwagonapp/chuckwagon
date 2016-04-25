@@ -48,12 +48,20 @@ ion-header-bar.bar-calm.bar.bar-header {
 .desc {
   margin-left:440px;
   margin-right: 40px;
-  a {
-    color: $calm;
-    text-decoration: none;
-    transition: all .3s ease-in-out;
-    &:hover {
-      color: $positive;
+  h1 {
+    color: $assertive;
+    a {
+      color: $calm;
+      text-decoration: none;
+      transition: all .3s ease-in-out;
+      &:hover {
+        color: $positive;
+      }
+    }
+  }
+  ul {
+    li {
+      margin-left: 30px;
     }
   }
 }
