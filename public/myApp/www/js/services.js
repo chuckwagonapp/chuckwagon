@@ -4,7 +4,7 @@ angular.module('starter.services', [])
   var cacheEngine = $cacheFactory('starter');
 
   // var ip = "http://10.0.10.70:8080";
-  var ip = "http://107.170.8.42:8080";
+  var ip = "https://chuckwagonapi.tech";
   // var ip = "http://localhost:8080";
 
   var vendorsURL = ip + "/vendor/location";
@@ -19,8 +19,8 @@ angular.module('starter.services', [])
       // ELSE get vendors from server, put them in cache
       else {
         console.log('no trucks in cache. getting from service');
-        // $http.get(vendorsURL).then(function(response) {
-        //   var trucks = response.data;
+        $http.get(vendorsURL).then(function(response) {
+          var trucks = response.data;
           var favArr = [];
           if (localStorage.getItem("favoriteVendors")) {
             favArr = JSON.parse(localStorage.getItem("favoriteVendors"));
@@ -39,7 +39,7 @@ angular.module('starter.services', [])
 
           cacheEngine.put('vendors',  trucks);
           defer.resolve(trucks);
-      // });
+      });
       }
       return defer.promise;
   }
@@ -56,7 +56,7 @@ angular.module('starter.services', [])
 
   // Dummy data for development
 
-  var trucks = [{
+  var temptrucks = [{
     id: 10,
      vendorName: 'Bon Banh Mi',
      tagsList: ['Asian', 'Sandwiches'],

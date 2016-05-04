@@ -4,20 +4,20 @@ angular
       var cacheEngine = $cacheFactory('search');
 
       // var ip = "http://10.0.10.70:8080";
-      var ip = "http://107.170.8.42:8080";
+      var ip = "https://chuckwagonapi.tech";
       // var ip = "http://localhost:8080";
 
       var searchURL = ip + '/search';
 
       function sendSearchOptions(processedOptions) {
         var defer = $q.defer();
-        // $http.post(searchURL, processedOptions).then(function(response) {
-        //   if(response) {
-        //     console.log("got trucks from server");
-        //   } else {
-        //     console.log("no trucks from server");
-        //   }
-        //   var trucks = response.data;
+        $http.post(searchURL, processedOptions).then(function(response) {
+          if(response) {
+            console.log("got trucks from server");
+          } else {
+            console.log("no trucks from server");
+          }
+          var trucks = response.data;
           var favArr = [];
           if (localStorage.getItem("favoriteVendors")) {
             favArr = JSON.parse(localStorage.getItem("favoriteVendors"));
@@ -37,7 +37,7 @@ angular
           defer.resolve(trucks);
         }, function(err) {
           console.log(err);
-        // });
+        });
         return defer.promise;
       }
 
@@ -60,7 +60,7 @@ angular
 
       // Dummy data for development
 
-      var trucks = [{
+      var temptrucks = [{
         id: 10,
          vendorName: 'Bon Banh Mi',
          tagsList: ['Asian', 'Sandwiches'],
@@ -122,7 +122,7 @@ angular
            created: "11:24 AM"},
          profilePictureLocation: 'https://d13yacurqjgara.cloudfront.net/users/272561/screenshots/2212995/screen_shot_2015-08-25_at_5.04.04_pm.png'
        }];
-       
+
       return {
         getTrucksFromCache: getTrucksFromCache,
         getTruck: getTruck,
