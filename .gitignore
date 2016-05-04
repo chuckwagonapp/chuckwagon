@@ -50,3 +50,4 @@ fabric.properties
 .DS_store
 .gradle
 build
+application.properties
