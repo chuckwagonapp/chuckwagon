@@ -90,7 +90,12 @@ public class Location {
     }
 
     public String getExpiresString() {
-        return expiresString;
+
+        if (expiresObject != null) {
+            return expiresObject.toString();
+        } else {
+            return expiresString;
+        }
     }
 
     public void setExpiresString(String expiresString) {
