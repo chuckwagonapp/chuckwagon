@@ -33,7 +33,7 @@ public class PopulateDB {
             dashi.setPassword(PasswordStorage.createHash(dashi.getPassword()));
             dashi.setBio("Asian + Latin Helping people add a little Sriracha to their Sombreros! Dashi is a food truck combining Asian and Latin cuisines -- from Steamed Buns to Tacos, and more!");
             Location dashiLoc = new Location(32.8997592f, -79.9831028f, "1000");
-            dashiLoc.setExpiresObject(LocalDateTime.now().plusDays(5));
+            dashiLoc.setExpiresObject(LocalDateTime.now().plusDays(60));
             dashiLoc.setImageUrl("https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-0/p640x640/11141196_1766106836952532_7506791276925488937_n.jpg?oh=10ad25c67b80253691481d7e2cded537&oe=57A4119B ");
             dashiLoc = locationRepository.save(dashiLoc);
             dashi.setLocation(dashiLoc);
@@ -47,7 +47,7 @@ public class PopulateDB {
             bacon.setBio("Charlestons gourmet Bacon Food truck. Serving all types of Bacon sandwiches and crazy Bacon filled eats.");
             bacon.setPassword(PasswordStorage.createHash(bacon.getPassword()));
             Location baconLoc = new Location(32.787342f, -79.98267f, "1000");
-            baconLoc.setExpiresObject(LocalDateTime.now().plusDays(5));
+            baconLoc.setExpiresObject(LocalDateTime.now().plusDays(60));
             baconLoc.setImageUrl("https://scontent-atl3-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/13000085_1780770425484372_6017258864353769878_n.jpg?oh=06db5e6b23d71511c3dff80582370bc7&oe=57B0FFC8 ");
             baconLoc = locationRepository.save(baconLoc);
             bacon.setLocation(baconLoc);
@@ -61,7 +61,7 @@ public class PopulateDB {
             lobster.setBio("We're a family-owned food truck that uses delicious, sustainable Maine Lobster & fresh local produce in hopes to bring New England, down South!!");
             lobster.setPassword(PasswordStorage.createHash(lobster.getPassword()));
             Location lobLoc = new Location(32.7880982f, -79.9375969f, "1000");
-            lobLoc.setExpiresObject(LocalDateTime.now().plusDays(5));
+            lobLoc.setExpiresObject(LocalDateTime.now().plusDays(60));
             lobLoc.setImageUrl("https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/s640x640/sh0.08/e35/12519269_150627505312547_696791116_n.jpg");
             lobLoc = locationRepository.save(lobLoc);
             lobster.setLocation(lobLoc);
@@ -75,7 +75,7 @@ public class PopulateDB {
             autob.setBio("Auto-Banh Food Truck is slingin' deliciously addictive and creative Banh Mi (Vietnamese baguette sandwiches) all over Charleston and the surrounding areas! ");
             autob.setPassword(PasswordStorage.createHash(autob.getPassword()));
             Location autobLoc = new Location(32.7966824f, -79.9969835f, "1000");
-            autobLoc.setExpiresObject(LocalDateTime.now().plusDays(5));
+            autobLoc.setExpiresObject(LocalDateTime.now().plusDays(60));
             autobLoc = locationRepository.save(autobLoc);
             autob.setLocation(autobLoc);
             autob.setProfilePictureLocation("http://www.holycitybrewing.com/sites/default/files/imagecache/custom_1000px/autobanh_0.jpg");
@@ -88,7 +88,7 @@ public class PopulateDB {
             huevos.setBio("A from-scratch food truck specializing in brunch fare. OMH works closely with local farmers in order to provide the highest quality ingredients possible for its customers.");
             huevos.setPassword(PasswordStorage.createHash(huevos.getPassword()));
             Location huevosLoc = new Location(32.78639043f, -79.93647125f, "1000");
-            huevosLoc.setExpiresObject(LocalDateTime.now().plusDays(5));
+            huevosLoc.setExpiresObject(LocalDateTime.now().plusDays(60));
             huevosLoc.setImageUrl("http://2.bp.blogspot.com/-Uxcm7zsV6j4/UQWIV-ujBRI/AAAAAAAAEC8/6TW0l57YLi8/s1600/IMG_0746.JPG ");
             huevosLoc = locationRepository.save(huevosLoc);
             huevos.setLocation(huevosLoc);
@@ -102,7 +102,7 @@ public class PopulateDB {
             pink.setBio("Delicious Vietnamese Food made with local ingredients. We prepare our Vietnamese dishes with modern techniques, old family recipes, and local ingredients.");
             pink.setPassword(PasswordStorage.createHash(pink.getPassword()));
             Location pinkLoc = new Location(32.7854069f, -79.9381028f, "1000");
-            pinkLoc.setExpiresObject(LocalDateTime.now().plusDays(2));
+            pinkLoc.setExpiresObject(LocalDateTime.now().plusDays(60));
             pinkLoc.setTweet("Come to Calhoun and St. Phillip for a banh mi study break");
             pinkLoc.setImageUrl("https://cdn3.vox-cdn.com/thumbor/VTLQKuFL8MpIzMyEtrQSruwfA2g=/0x0:4896x2754/1050x591/cdn0.vox-cdn.com/uploads/chorus_image/image/47495951/pinkbelliesam.0.0.0.0.jpg");
             pinkLoc = locationRepository.save(pinkLoc);
@@ -117,7 +117,7 @@ public class PopulateDB {
             cast.setBio("Grandmas swear by it & Chefs depend on it... Cast Iron.");
             cast.setPassword(PasswordStorage.createHash(cast.getPassword()));
             Location castLoc = new Location(32.840511f, -80.01388f, "1000");
-            castLoc.setExpiresObject(LocalDateTime.now().plusDays(2));
+            castLoc.setExpiresObject(LocalDateTime.now().plusDays(60));
             castLoc.setTweet("Charred Brussels with a Bacon Cheddar Burger!");
             castLoc.setImageUrl("https://scontent-atl3-1.xx.fbcdn.net/hphotos-xlf1/v/t1.0-0/p480x480/13083190_850295471762855_129006625686555498_n.jpg?oh=2d2f4b914cf9f6b7b442699f44bc9709&oe=5778ADC1 ");
             castLoc = locationRepository.save(castLoc);
@@ -132,7 +132,7 @@ public class PopulateDB {
             lunch.setBio("Southern Gourmet Soul-food & BBQ with a Tex-Mex Flare.");
             lunch.setPassword(PasswordStorage.createHash(lunch.getPassword()));
             Location lunchLoc = new Location(32.86291f, -79.91477f, "1000");
-            lunchLoc.setExpiresObject(LocalDateTime.now().plusDays(2));
+            lunchLoc.setExpiresObject(LocalDateTime.now().plusDays(60));
             lunchLoc.setTweet("Cloudy with a chance of nachos!!! Pulled pork, queso, pickled jalapeños, cilantro and BBQ sauce. Here till 1:30pm.");
             lunchLoc = locationRepository.save(lunchLoc);
             lunch.setLocation(lunchLoc);
@@ -145,7 +145,7 @@ public class PopulateDB {
             king.setBio("Providing all natural hand crafted pops in the low country.");
             king.setPassword(PasswordStorage.createHash(king.getPassword()));
             Location kingLoc = new Location(32.86415364f, -79.91449641f, "1000");
-            kingLoc.setExpiresObject(LocalDateTime.now().plusDays(2));
+            kingLoc.setExpiresObject(LocalDateTime.now().plusDays(60));
             kingLoc = locationRepository.save(kingLoc);
             king.setLocation(kingLoc);
             king.setProfilePictureLocation("http://academicdepartments.musc.edu/sebin/j/x/kingofpops%20logo.png");
@@ -158,7 +158,7 @@ public class PopulateDB {
             juice.setBio("The Juice Joint's mission is supremely healthy and nutrient-dense juices made from whole, organic, sustainable raw fruits and vegetables; whole fruit smoothies.");
             juice.setPassword(PasswordStorage.createHash(juice.getPassword()));
             Location juiceLoc = new Location(32.65578969f, -79.94008672f, "1000");
-            juiceLoc.setExpiresObject(LocalDateTime.now().plusDays(2));
+            juiceLoc.setExpiresObject(LocalDateTime.now().plusDays(60));
             juiceLoc.setTweet("Come see us the weekend from 7-7 Saturday and Sunday for some sun and delicious healthy treats! Stop by post bridge run!");
             juiceLoc = locationRepository.save(juiceLoc);
             juice.setLocation(juiceLoc);
@@ -171,7 +171,7 @@ public class PopulateDB {
             tokyo.setBio("The Only Japanese Style of Crepes you can find in South East! Gluten free, and Dairy free are available!");
             tokyo.setPassword(PasswordStorage.createHash(tokyo.getPassword()));
             Location tokyoLoc = new Location(32.65610584f, -79.93931425f, "1000");
-            tokyoLoc.setExpiresObject(LocalDateTime.now().plusDays(2));
+            tokyoLoc.setExpiresObject(LocalDateTime.now().plusDays(60));
             tokyoLoc.setTweet("We’ll be out here all day and night!");
             tokyoLoc.setImageUrl("https://media-cdn.tripadvisor.com/media/photo-s/08/62/42/01/tokyo-crepes.jpg ");
             tokyoLoc = locationRepository.save(tokyoLoc);
@@ -186,7 +186,7 @@ public class PopulateDB {
             mac.setBio("The Mac Daddy Food Truck offers include Chef Landen’s signature Mac & Cheese, must have toppings for your mac, and daily sandwich and salad specials.");
             mac.setPassword(PasswordStorage.createHash(mac.getPassword()));
             Location macLoc = new Location(32.86465379f, -79.91207706f, "1000");
-            macLoc.setExpiresObject(LocalDateTime.now().plusDays(2));
+            macLoc.setExpiresObject(LocalDateTime.now().plusDays(60));
             macLoc.setImageUrl("http://cravekitchenandcocktails.com/wp-content/uploads/2015/09/mac3.jpg");
             macLoc = locationRepository.save(macLoc);
             mac.setLocation(macLoc);
@@ -199,7 +199,7 @@ public class PopulateDB {
             grain.setBio("Come along for the ride on the daily culinary adventures of the Short Grain food truck and its untraditional take on Japanese fare. Arigato ya'll.");
             grain.setPassword(PasswordStorage.createHash(grain.getPassword()));
             Location grainLoc = new Location(32.792677f, -79.941683f, "1000");
-            grainLoc.setExpiresObject(LocalDateTime.now().plusDays(2));
+            grainLoc.setExpiresObject(LocalDateTime.now().plusDays(60));
             grainLoc.setTweet("Owner Shuai Wang making the best Beet Salad in town!");
             grainLoc.setImageUrl("http://www.charlestonscene.com/storyimage/CP/20150603/CS/150609783/AR/0/AR-150609783.jpg&maxw=800&q=90 ");
             grainLoc = locationRepository.save(grainLoc);
@@ -213,7 +213,7 @@ public class PopulateDB {
             tow.setBio("A mobile woodfired pizza food truck located in beautiful Charleston, SC");
             tow.setPassword(PasswordStorage.createHash(tow.getPassword()));
             Location towLoc = new Location(32.8216426f, -79.9515599f, "1000");
-            towLoc.setExpiresObject(LocalDateTime.now().plusDays(2));
+            towLoc.setExpiresObject(LocalDateTime.now().plusDays(60));
             towLoc.setTweet("It’s a perfect day for a margherita and a margarita");
             towLoc = locationRepository.save(towLoc);
             tow.setLocation(towLoc);
